@@ -1,1 +1,1 @@
-# Cube-Studio-2D-1.0.0-C-
+# Cube Studio 2D 1.0.0 C++
