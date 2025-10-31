@@ -3,16 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cube Studio 2D - Dashboard</title>
+  <title>Cube Studio 2D</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Cube Studio 2D</h1>
-  <div id="info">
-    <p>Status da Engine: <span id="engine-status">Desconectado</span></p>
-    <button onclick="startEngine()">Iniciar Engine</button>
-    <button onclick="stopEngine()">Parar Engine</button>
-  </div>
+  <header>
+    <h1>This is a game engine 2D called: Cube Studio 2D</h1>
+    <p>and has a programming language: CSScript (Cube Studio Script).</p>
+    <p>Is available for Android, PC and iOS!</p>
+  </header>
+
+  <section id="install">
+    <h2>Instalação</h2>
+    <a href="CubeStudioInstaller.apk" download class="btn">Instalar para Android</a>
+    <a href="CubeStudioInstaller.exe" download class="btn">Instalar para Windows</a>
+  </section>
+
+  <nav id="hub">
+    <button data-view="create" class="nav-btn active">CRIAR JOGOS</button>
+    <button data-view="games" class="nav-btn">VER JOGOS</button>
+    <button data-view="models" class="nav-btn">MODELOS DE JOGOS</button>
+    <button data-view="tutorials" class="nav-btn">TUTORIAIS</button>
+  </nav>
+
+  <main>
+    <section id="create" class="tab active">
+      <h3>Criar Jogos</h3>
+      <p>Aqui você pode iniciar a criação do seu jogo.</p>
+      <!-- Conteúdo do editor -->
+      <button id="insertSpriteBtn">Insert Sprite (Inserir Sprite)</button>
+      <p><small>Atenção aos atalhos:</small></p>
+      <ul>
+        <li>Duplicar: Ctrl + D</li>
+        <li>Agrupar: Ctrl + G</li>
+        <li>Criar Pasta: Ctrl + F</li>
+        <li>Tela Cheia: F11</li>
+      </ul>
+      <div id="editorWindow">
+        <div class="window-titlebar">
+          <span>Editor</span>
+          <button id="showExplorerBtn">Show Explorer</button>
+          <button id="showPropertiesBtn">Show Properties</button>
+          <button id="showOutputBtn">Show Output</button>
+          <button id="openScriptEditorBtn">Abrir Editor CSScript</button>
+        </div>
+        <div id="explorer" class="sidebar">Explorador</div>
+        <div id="properties" class="sidebar">Propriedades</div>
+        <div id="output" class="sidebar">Console Output</div>
+        <textarea id="scriptEditor" spellcheck="false" placeholder="Escreva seu código CSScript aqui..."></textarea>
+      </div>
+    </section>
+
+    <section id="games" class="tab">
+      <h3>Ver Jogos</h3>
+      <p>Lista de jogos disponíveis.</p>
+      <!-- Lista de jogos -->
+    </section>
+
+    <section id="models" class="tab">
+      <h3>Modelos de Jogos</h3>
+      <p>Modelos para você usar nos seus jogos.</p>
+      <!-- Conteúdo dos modelos -->
+    </section>
+
+    <section id="tutorials" class="tab">
+      <h3>Tutoriais</h3>
+      <p>Aprenda a usar o Cube Studio 2D com nossos tutoriais.</p>
+      <!-- Conteúdo dos tutoriais -->
+    </section>
+  </main>
 
   <script src="script.js"></script>
 </body>
